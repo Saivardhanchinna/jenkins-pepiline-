@@ -1,0 +1,34 @@
+pipeline {
+    agent any
+
+    stages
+    {
+        stage('continuous download')
+        {
+            steps {
+                echo 'continuous download'
+            }
+        }
+        
+        stage('continious bulid') {
+            steps {
+                echo 'continuous bulid'
+            }
+        }
+        stage('continious testing') {
+            steps {
+                echo 'continuous testing'
+            }
+        }
+        stage('continious depolyment') {
+            steps {
+                echo 'continuous depolyment'
+            }
+        }
+        stage('continious release') {
+            steps {
+                echo 'continuous release'
+            }
+        }
+    }
+}
