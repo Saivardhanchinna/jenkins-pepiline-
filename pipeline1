@@ -1,0 +1,19 @@
+node('built-in') 
+{
+    stage('Continuous download')
+    {
+        git branch: 'main', url: 'https://github.com/Surja07/Maven1.git'
+
+    }
+    stage('Continuous build') 
+    {
+        sh '''mvn package'''
+    }
+      stage('Continuous deployment')
+     {
+         sh '''scp /var/lib/jenkins/workspace/scriptedpipeline1/HelloWorld.java \
+ubuntu@172.31.30.183:/home/ubuntu/app1/HelloWorld.java '''
+
+     }
+
+ }
