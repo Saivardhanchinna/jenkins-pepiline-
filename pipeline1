@@ -15,5 +15,10 @@ node('built-in')
 ubuntu@172.31.30.183:/home/ubuntu/app1/HelloWorld.java '''
 
      }
+     stage('Compile and Test Java')
+      {
+          "javac /var/lib/jenkins/workspace/scriptedpipeline1/HelloWorld.java"
+     "java -cp /var/lib/jenkins/workspace/scriptedpipeline1 HelloWorld"
+      }
 
  }
